@@ -7,7 +7,6 @@ import android.widget.Button;
 
 class Library_Actvity extends AppCompatActivity {
 
-
     private Button button1, button2;
 
     Logs logs;
