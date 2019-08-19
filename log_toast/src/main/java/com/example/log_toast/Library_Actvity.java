@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Library_Actvity extends AppCompatActivity {
+class Library_Actvity extends AppCompatActivity {
 
 
     private Button button1, button2;
+
+    Logs logs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,17 +19,17 @@ public class Library_Actvity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
-
+        logs = new LogToast();
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogToast.toast(getBaseContext(), "SAVE");
+                logs.toast(getBaseContext(), "SAVE");
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogToast.toast(getBaseContext(), "DELETE");
+                logs.toast(getBaseContext(), "DELETE");
             }
         });
     }

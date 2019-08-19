@@ -4,16 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-public class LogToast {
+ class LogToast extends Logs {
 
-    public static void toast(Context context, String message) {
+    public void toast(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
 
-    public static void newIntent(Context context){
-        Intent intent =new Intent(context,Library_Actvity.class);
-
+    public void newIntent(Context context) {
+        Intent intent = new Intent(context, Library_Actvity.class);
         context.startActivity(intent);
     }
 }
